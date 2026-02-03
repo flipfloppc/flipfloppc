@@ -178,3 +178,127 @@ header {
     transform: scale(1.03);
     box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
 }
+#products {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.product-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.product-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--primary-green, #32ff7e);
+    color: #0f172a;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.product-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 30px;
+}
+
+.product-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.product-info h2 span {
+    color: var(--primary-green, #32ff7e);
+}
+
+.specs-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.specs-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #cbd5e1;
+}
+
+.specs-list li strong {
+    color: var(--accent-blue, #18dcff);
+    margin-right: 5px;
+}
+
+/* Zona de preț */
+.product-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.03);
+    padding: 30px;
+    border-radius: 15px;
+    min-width: 200px;
+}
+
+.price-tag {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-tag .amount {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.price-tag .currency {
+    color: var(--primary-green, #32ff7e);
+    font-weight: 600;
+}
+
+.btn-buy {
+    background: transparent;
+    border: 2px solid var(--primary-green, #32ff7e);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background: var(--primary-green, #32ff7e);
+    color: #0f172a;
+    box-shadow: 0 0 20px rgba(50, 255, 126, 0.4);
+}
+
+/* Adaptare pentru mobil */
+@media (max-width: 600px) {
+    .product-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .specs-list li {
+        text-align: left;
+    }
+}
